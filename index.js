@@ -10,15 +10,15 @@ INITIAL PROMPTS:
 > Bartender can choose Liquor Type and Flavor Profile (Sweet, Dry) and generate a random cocktail
 
 JAVASCRIPT GENERATORS: 
-> Bartender Helper will show ingredients (with images) = SUBMIT
+> (~~complete~~) Bartender Helper will show ingredients (with images) = SUBMIT 
   > FUNCTION: randomCocktail = submit event listener when input form type=submit (GENERATE) is submitted
-> Bartender Helper will allow to generate another cocktail if the random cocktail does not suffice = KEYDOWN 
+> (~~incomplete~~) Bartender Helper will allow to generate another cocktail if the random cocktail does not suffice = KEYDOWN 
   > FUNCTION: nextCocktail = keyDown event listener to next cocktail with the same liquor type/flavor profile
-> Bartender Helper can increase serving size = MULTIPLY FORMULA
+> (~~complete~~) Bartender Helper can increase serving size = MULTIPLY FORMULA 
   > FUNCTION: cocktailServingSize = cocktails.ingredients.amount.value * servingSize
-> Bartender Helper will show type of glass to use (with image) = MOUSEOVER (EXTRA)
+> (~~complete~~) Bartender Helper will show type of glass to use (with image) = MOUSEOVER (EXTRA)
   > FUNCTION: glassCocktail = mouseover event listener to show image of glass when mouse is over the cocktails.glass 
-> if Bartender chooses Non-Alcoholic, Bartender Helper will return a list of soft-drinks and a note to take care of their intoxicated friends = WINDOW.LOAD (EXTRA)
+> (~~complete~~) If Bartender chooses Non-Alcoholic, Bartender Helper will return a list of soft-drinks and a note to take care of their intoxicated friends = WINDOW.LOAD (EXTRA)
   > FUNCTION: nonAlcCocktail = figure out how to generate a pop up within the page to show offering of organic sodas (with X to exit in-window pop up)
 
 ITERATE = FILTER or FOR EACH 
@@ -29,6 +29,7 @@ CSS DESIGN:
 */
 
 document.addEventListener('DOMContentLoaded', () => {
+
 // FUNCTION: getCocktail = submit event listener when input form type=submit (GENERATE) is submitted
 function getCocktail(liquorType, flavorProfile) {
   fetch("http://localhost:3000/cocktails")
@@ -79,7 +80,7 @@ function displaySodaImage() {
   cocktailList.classList.add("soda-image");
   
   const sodaText = document.createElement('p');
-  sodaText.textContent = "Enjoy a selection of organic sodas brought to you by Red Bull."
+  sodaText.textContent = "Enjoy a selection of organic sodas brought to you by Organics by Red Bull."
   cocktailList.appendChild(sodaText);
   
   cocktailList.style.display = 'block';
@@ -95,7 +96,8 @@ function displayCocktail(cocktail) {
     const cocktailList = document.getElementById('cocktail-container');
     const liquorType = Array.isArray(cocktail['liquor-type']) ? cocktail['liquor-type'].join(', ') : cocktail['liquor-type'];
     const servingSize = 1;
-    // User Deliverable: Do not make the cocktail-container div show up until after type=submit GENERATE is clicked
+
+    // Dev Deliverable: Do not make the cocktail-container div show up until after type=submit GENERATE is clicked
     // Below Code is building HTML within JavaScript - hence the back tick usage and no color differentiation. String interpolation is being used for pulling info from db.json
     const cocktailHTML = `
         <h2>${cocktail.name}</h2>
@@ -163,6 +165,3 @@ document.addEventListener('keyDown', function() {
 });
 
 });
-
-
-// research on possibility of this function

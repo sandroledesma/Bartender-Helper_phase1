@@ -124,6 +124,262 @@
                 {"name": "Grenadine Syrup", "amount": {"unit": "oz", "value": 0.5}}],
             "glass": "Collins Glass", 
             "instructions": "Pour tequila and orange juice into a tall cocktail glass over ice. Add Grenadine, do not stir. Garnish with orange slice and cherry. Serve."
+        },
+        {
+            "id": "11",
+            "name": "Moscow Mule",
+            "liquor-type": ["Vodka"],
+            "flavor-profile": "Refreshing",
+            "ingredients": [
+                {"name": "Vodka", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Ginger Beer", "amount": {"unit": "oz", "value": 4}},
+                {"name": "Lime Juice", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Simple Syrup", "amount": {"unit": "tsp", "value": 1}}],
+            "glass": "Copper Mug",
+            "instructions": "Combine vodka and ginger beer in a copper mug or highball glass filled with ice. Add lime juice and simple syrup. Stir gently and garnish with a lime wedge."
+        },
+        {
+            "id": "12",
+            "name": "Paloma",
+            "liquor-type": ["Tequila"],
+            "flavor-profile": "Refreshing",
+            "ingredients": [
+                {"name": "Tequila", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Grapefruit Soda", "amount": {"unit": "oz", "value": 4}},
+                {"name": "Lime Juice", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Simple Syrup", "amount": {"unit": "tsp", "value": 1}}],
+            "glass": "Collins Glass",
+            "instructions": "Fill a glass with ice, pour in the tequila and grapefruit soda. Add lime juice and simple syrup. Stir gently and garnish with a lime wedge."
+        },
+        {
+            "id": "13",
+            "name": "Gimlet",
+            "liquor-type": ["Gin"],
+            "flavor-profile": "Sour",
+            "ingredients": [
+                {"name": "Gin", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Lime Juice", "amount": {"unit": "oz", "value": 0.75}},
+                {"name": "Simple Syrup", "amount": {"unit": "tsp", "value": 1}}],
+            "glass": "Martini Glass",
+            "instructions": "Shake ingredients with ice, then strain into a chilled martini glass. Garnish with a lime wheel or twist."
+        },
+        {
+            "id": "14",
+            "name": "Daiquiri",
+            "liquor-type": ["Rum"],
+            "flavor-profile": "Refreshing",
+            "ingredients": [
+                {"name": "White Rum", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Lime Juice", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Simple Syrup", "amount": {"unit": "tsp", "value": 1}}],
+            "glass": "Coupe Glass",
+            "instructions": "Shake all ingredients with ice and strain into a chilled coupe glass. Garnish with a lime wheel or twist."
+        },
+        {
+            "id": "15",
+            "name": "Mai Tai",
+            "liquor-type": ["Rum"],
+            "flavor-profile": "Sweet",
+            "ingredients": [
+                {"name": "Light Rum", "amount": {"unit": "oz", "value": 1.5}},
+                {"name": "Dark Rum", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Orange Curacao", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Orgeat Syrup", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Lime Juice", "amount": {"unit": "oz", "value": 0.75}},
+                {"name": "Simple Syrup", "amount": {"unit": "tsp", "value": 1}}],
+            "glass": "Collins Glass",
+            "instructions": "Shake all ingredients except the dark rum with ice. Strain into a glass filled with crushed ice. Float the dark rum on top. Garnish with a mint sprig and a lime wheel."
+        },
+        {
+            "id": "16",
+            "name": "Whiskey Sour",
+            "liquor-type": ["Whiskey"],
+            "flavor-profile": "Sour",
+            "ingredients": [
+                {"name": "Bourbon", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Lemon Juice", "amount": {"unit": "oz", "value": 0.75}},
+                {"name": "Simple Syrup", "amount": {"unit": "tsp", "value": 1}}],
+            "glass": "Rocks Glass",
+            "instructions": "Shake ingredients with ice, then strain into a rocks glass filled with ice. Garnish with a cherry and an orange slice."
+        },
+        {
+            "id": "17",
+            "name": "Piña Colada",
+            "liquor-type": ["Rum"],
+            "flavor-profile": "Sweet",
+            "ingredients": [
+                {"name": "Light Rum", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Coconut Cream", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Pineapple Juice", "amount": {"unit": "oz", "value": 2}}],
+            "glass": "Hurricane Glass",
+            "instructions": "Blend all ingredients with ice until smooth. Pour into a hurricane glass and garnish with a pineapple wedge and a cherry."
+        },
+        {
+            "id": "18",
+            "name": "White Russian",
+            "liquor-type": ["Vodka"],
+            "flavor-profile": "Sweet",
+            "ingredients": [
+                {"name": "Vodka", "amount": {"unit": "oz", "value": 1.5}},
+                {"name": "Coffee Liqueur", "amount": {"unit": "oz", "value": 0.75}},
+                {"name": "Heavy Cream", "amount": {"unit": "oz", "value": 0.75}}],
+            "glass": "Rocks Glass",
+            "instructions": "Pour vodka and coffee liqueur into an old-fashioned glass filled with ice. Float the heavy cream on top and stir slowly."
+        },
+        {
+            "id": "19",
+            "name": "Singapore Sling",
+            "liquor-type": ["Gin"],
+            "flavor-profile": "Sweet",
+            "ingredients": [
+                {"name": "Gin", "amount": {"unit": "oz", "value": 1.5}},
+                {"name": "Cherry Liqueur", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Benedictine", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Grenadine", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Pineapple Juice", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Lime Juice", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Club Soda", "amount": {"unit": "oz", "value": 1}}],
+            "glass": "Collins Glass",
+            "instructions": "Shake all ingredients except club soda with ice. Strain into a Collins glass filled with ice. Top with club soda and garnish with a cherry and a slice of pineapple."
+        },
+        {
+            "id": "20",
+            "name": "Mint Julep",
+            "liquor-type": ["Whiskey"],
+            "flavor-profile": "Refreshing",
+            "ingredients": [
+                {"name": "Bourbon", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Simple Syrup", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Fresh Mint Leaves", "amount": {"unit": "unit", "value": 6}}],
+            "glass": "Julep Cup",
+            "instructions": "Muddle mint leaves and simple syrup in a julep cup. Fill the cup with crushed ice and add bourbon. Stir until the cup is frosted. Garnish with a mint sprig."
+        },
+        {
+            "id": "21",
+            "name": "Tommy's Margarita",
+            "liquor-type": ["Tequila"],
+            "flavor-profile": "Refreshing",
+            "ingredients": [
+                {"name": "Tequila", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Lime Juice", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Agave Syrup", "amount": {"unit": "oz", "value": 0.75}}],
+            "glass": "Rocks Glass",
+            "instructions": "Shake all ingredients with ice, then strain into a rocks glass filled with ice. Garnish with a lime wheel."
+        },
+        {
+            "id": "22",
+            "name": "Whiskey Smash",
+            "liquor-type": ["Whiskey"],
+            "flavor-profile": "Refreshing",
+            "ingredients": [
+                {"name": "Bourbon", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Lemon Wedges", "amount": {"unit": "unit", "value": 2}},
+                {"name": "Simple Syrup", "amount": {"unit": "oz", "value": 0.75}},
+                {"name": "Fresh Mint Leaves", "amount": {"unit": "unit", "value": 4}}],
+            "glass": "Rocks Glass",
+            "instructions": "In a shaker, muddle the lemon wedges, mint leaves, and simple syrup. Add bourbon and ice, then shake well. Strain into a rocks glass filled with crushed ice. Garnish with a sprig of mint."
+        },
+        {
+            "id": "23",
+            "name": "Gin Fizz",
+            "liquor-type": ["Gin"],
+            "flavor-profile": "Refreshing",
+            "ingredients": [
+                {"name": "Gin", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Lemon Juice", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Simple Syrup", "amount": {"unit": "tsp", "value": 1}},
+                {"name": "Club Soda", "amount": {"unit": "oz", "value": 1}}],
+            "glass": "Collins Glass",
+            "instructions": "Shake gin, lemon juice, and simple syrup with ice. Strain into a glass filled with ice. Top with club soda and stir gently."
+        },
+        {
+            "id": "24",
+            "name": "Sazerac",
+            "liquor-type": ["Whiskey"],
+            "flavor-profile": "Strong",
+            "ingredients": [
+                {"name": "Rye Whiskey", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Absinthe", "amount": {"unit": "tsp", "value": 1}},
+                {"name": "Simple Syrup", "amount": {"unit": "tsp", "value": 1}},
+                {"name": "Peychaud's Bitters", "amount": {"unit": "dashes", "value": 3}}],
+            "glass": "Rocks Glass",
+            "instructions": "Rinse a chilled glass with absinthe, then discard the absinthe. Stir the other ingredients with ice and strain into the glass. Garnish with a lemon twist."
+        },
+        {
+            "id": "25",
+            "name": "Vodka Collins",
+            "liquor-type": ["Vodka"],
+            "flavor-profile": "Refreshing",
+            "ingredients": [
+                {"name": "Vodka", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Lemon Juice", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Simple Syrup", "amount": {"unit": "tsp", "value": 1}},
+                {"name": "Club Soda", "amount": {"unit": "oz", "value": 2}}],
+            "glass": "Collins Glass",
+            "instructions": "Shake vodka, lemon juice, and simple syrup with ice. Strain into a glass filled with ice. Top with club soda and stir gently."
+        },
+        {
+            "id": "26",
+            "name": "Dark 'n' Stormy",
+            "liquor-type": ["Rum"],
+            "flavor-profile": "Refreshing",
+            "ingredients": [
+                {"name": "Dark Rum", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Ginger Beer", "amount": {"unit": "oz", "value": 4}}],
+            "glass": "Rocks Glass",
+            "instructions": "Fill a glass with ice, pour in the dark rum, then top with ginger beer. Stir gently and garnish with a lime wedge."
+        },
+        {
+            "id": "27",
+            "name": "Mojito",
+            "liquor-type": ["Rum"],
+            "flavor-profile": "Refreshing",
+            "ingredients": [
+                {"name": "White Rum", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Lime Wedges", "amount": {"unit": "unit", "value": 4}},
+                {"name": "Fresh Mint Leaves", "amount": {"unit": "unit", "value": 6}},
+                {"name": "Simple Syrup", "amount": {"unit": "oz", "value": 0.75}},
+                {"name": "Club Soda", "amount": {"unit": "oz", "value": 1}}],
+            "glass": "Collins Glass",
+            "instructions": "Muddle the lime wedges and mint leaves with simple syrup in a glass. Fill the glass with ice, pour in the rum, and top with club soda. Stir gently and garnish with a mint sprig."
+        },
+        {
+            "id": "28",
+            "name": "Corpse Reviver No. 2",
+            "liquor-type": ["Gin"],
+            "flavor-profile": "Strong",
+            "ingredients": [
+                {"name": "Gin", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Lemon Juice", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Cointreau", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Lillet Blanc", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Absinthe", "amount": {"unit": "dash", "value": 1}}],
+            "glass": "Martini Glass",
+            "instructions": "Shake all ingredients with ice, then strain into a chilled martini glass. Garnish with a lemon twist."
+        },
+        {
+            "id": "29",
+            "name": "Bee's Knees",
+            "liquor-type": ["Gin"],
+            "flavor-profile": "Sweet",
+            "ingredients": [
+                {"name": "Gin", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Lemon Juice", "amount": {"unit": "oz", "value": 0.75}},
+                {"name": "Honey Syrup", "amount": {"unit": "oz", "value": 0.5}}],
+            "glass": "Martini Glass",
+            "instructions": "Shake all ingredients with ice, then strain into a chilled martini glass. Garnish with a lemon twist."
+        },
+        {
+            "id": "30",
+            "name": "Cuba Libre",
+            "liquor-type": ["Rum"],
+            "flavor-profile": "Refreshing",
+            "ingredients": [
+                {"name": "Light Rum", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Cola", "amount": {"unit": "oz", "value": 4}},
+                {"name": "Lime Juice", "amount": {"unit": "oz", "value": 0.5}}],
+            "glass": "Rocks Glass",
+            "instructions": "Fill a glass with ice, pour in the rum, then top with cola. Add lime juice and stir gently. Garnish with a lime wedge."
         }
     ]
 }
