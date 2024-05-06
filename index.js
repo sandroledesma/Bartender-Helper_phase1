@@ -42,11 +42,36 @@ function getCocktail(liquorType, flavorProfile) {
       const randomIndex = Math.floor(Math.random() * filteredCocktail.length); // 
       const randomCocktail = filteredCocktail[randomIndex]; // retrieves a random cocktail based on the criteria
       displayCocktail(randomCocktail); // displays the random cocktail 
+    } else if (liquorType === "Non-Alcoholic") {
+      displaySodaImage();
     } else {
-      document.getElementById('cocktail-container').innerHTML = "No Cocktail found with your criteria."; // Update this to a specific displayNoCocktailMessage function
+      displayNoCocktailMessage();
     }
     });
-  }
+  };
+
+function displaySodaImage() {
+  const cocktailList = document.getElementById('cocktail-container');
+  const img = document.createElement('img');
+  img.src = './images/soda-image.jpeg';
+  img.alt = 'Soda Image';
+  img.height = 150;
+  cocktailList.innerHTML = ''; 
+  cocktailList.appendChild(img);
+  cocktailList.classList.add("soda-image");
+
+  const sodaText = document.createElement('p');
+  sodaText.textContent = "Enjoy a selection of organic sodas brought to you by Red Bull."
+  cocktailList.appendChild(sodaText);
+
+  cocktailList.style.display = 'block';
+}
+
+function displayNoCocktailMessage() {
+  const cocktailList = document.getElementById('cocktail-container');
+  cocktailList.innerHTML = "No Cocktail found with your criteria.";
+  cocktailList.style.display = 'block';
+};
 
 document.getElementById('cocktail-finder').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -58,14 +83,21 @@ document.getElementById('cocktail-finder').addEventListener('submit', function(e
         getCocktail(liquorType, flavorProfile);
     } else {
         // If either liquor type or flavor profile is not selected, display an error message
-        document.getElementById('cocktail-container').innerHTML = "Please select both liquor type and flavor profile.";
+        displayCriteriaMessage();
     }
   });
+
+function displayCriteriaMessage() {
+  const cocktailList = document.getElementById('cocktail-container');
+  cocktailList.innerHTML = "Please select both liquor type and flavor profile.";
+  cocktailList.style.display = 'block';
+};
 
 function displayCocktail(cocktail) {
     const cocktailList = document.getElementById('cocktail-container');
     const liquorType = Array.isArray(cocktail['liquor-type']) ? cocktail['liquor-type'].join(', ') : cocktail['liquor-type'];
     const servingSize = 1;
+    // User Deliverable: Do not make the cocktail-container div show up until after type=submit GENERATE is clicked
     // Below Code is building HTML within JavaScript - hence the back tick usage and no color differentiation. String interpolation is being used for pulling info from db.json
     const cocktailHTML = `
         <h2>${cocktail.name}</h2>
@@ -99,7 +131,7 @@ function displayCocktail(cocktail) {
           amountElement.textContent = `${ingredient.amount.value * newServingSize} ${ingredient.amount.unit} ${ingredient.name}`
       });
     });
-}
+};
 
 function displayGlassImage(glassType) {
   const glassImage = document.createElement('img');
@@ -107,7 +139,7 @@ function displayGlassImage(glassType) {
   glassImage.alt = '${glassType} Glass';
   glassImage.classList.add('glass-image');
   document.getElementById('cocktail-container').appendChild(glassImage);
-}
+};
 
 document.getElementById('cocktail-container').addEventListener('mouseover', function(event) {
   // FUNCTION: glassCocktail = mouseover event listener to show image of glass when mouse is over the cocktails.glass 
@@ -130,7 +162,7 @@ document.addEventListener('keyDown', function() {
   // FUNCTION: nextCocktail = keyDown event listener to next cocktail with the same liquor type/flavor profile
   // image src = ./images/keydown-image.png
   const nextCocktail =  "";
-})
+});
 
 });
 

@@ -66,6 +66,12 @@ body {
     width: 150px;
 }
 
+.soda-image {
+    top: 50%;
+    left: 50%;
+    height: 150px;
+}
+
 .cocktail-container:hover .glass-image {
     display: block;
 }
