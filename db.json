@@ -1,0 +1,129 @@
+{
+    "cocktails": [
+        {
+            "id": "1",
+            "name": "Espresso Martini",
+            "liquor-type": ["Vodka", "Tequila"],
+            "flavor-profile": "Strong",
+            "ingredients": [
+                {"name": "Vodka or Tequila", "amount": {"unit": "oz", "value": 1.5}},
+                {"name": "Espresso", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Coffee Liqueur","amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Simple Syrup","amount": {"unit": "oz", "value": 0.25}}],
+            "glass": "Martini Glass", 
+            "instructions": "Pour ingredients into shaker filled with ice, shake vigorously, and strain into chilled martini glass. Serve with three espresso beans on top."
+        },
+        {
+            "id": "2",
+            "name": "Margarita",
+            "liquor-type": ["Tequila"],
+            "flavor-profile": "Sour",
+            "ingredients": [
+                {"name": "Tequila", "amount": {"unit": "oz", "value": 1.5}},
+                {"name": "Lime Juice", "amount": {"unit": "oz", "value": 0.75}},
+                {"name": "Cointreau", "amount": {"unit": "oz", "value": 0.75}},
+                {"name": "Simple Syrup", "amount": {"unit": "tsp", "value": 1}}],
+            "glass": "Margarita Glass", 
+            "instructions": "Rub the rim of the glass with lime slice to make the salt stick to it. Shake the other ingredients with ice, then carefully pour into glass. Garnish with lime slice and serve over ice in a margarita glass."
+        },
+        {
+            "id": "3",
+            "name": "Old Fashioned",
+            "liquor-type": ["Whiskey"],
+            "flavor-profile": "Strong",
+            "ingredients": [
+                {"name": "Whiskey/Bourbon", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Simple Syrup", "amount": {"unit": "tsp", "value": 1}},
+                {"name": "Angostura Bitters", "amount": {"unit": "dashes", "value": 2}}],
+            "glass": "Rocks Glass", 
+            "instructions": "Stir with ice and strain over large ice cube in frozen rocks glass. Garnish with an orange twist and serve."
+        },
+        {
+            "id": "4",
+            "name": "Negroni",
+            "liquor-type": ["Gin"],
+            "flavor-profile": "Dry",
+            "ingredients": [
+                {"name": "Gin", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Campari", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Sweet Vermouth", "amount": {"unit": "oz", "value": 1}}],
+            "glass": "Rocks Glass", 
+            "instructions": "Stir and strain into rocks glass over ice. Garnish with an orange twist and serve."
+        },
+        {
+            "id": "5",
+            "name": "French 75",
+            "liquor-type": ["Gin"],
+            "flavor-profile": "Sweet",
+            "ingredients": [
+                {"name": "Gin", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Lemon Juice", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Simple Syrup", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Champagne", "amount": {"unit": "oz", "value": 3}}],
+            "glass": "Champagne Flute", 
+            "instructions": "Stir Gin, Lemon Juice and Simply Syrup in a shaker with ice. Strain into a champagne flute. Top with Champagne and garnish with a lemon twist."
+        },
+        {
+            "id": "6",
+            "name": "Dirty Martini",
+            "liquor-type": ["Gin", "Vodka"],
+            "flavor-profile": "Strong",
+            "ingredients": [
+                {"name": "Gin or Vodka", "amount": {"unit": "oz", "value": 2.5}},
+                {"name": "Dry Vermouth", "amount": {"unit": "oz", "value": 0.5}},
+                {"name": "Olive Brine", "amount": {"unit": "oz", "value": 0.5}}],
+            "glass": "Martini Glass", 
+            "instructions": "Add all ingredients to a shaker with ice. Shake until well chilled. Double strain through fine mesh strainer into a chilled martini glass. Garnish with a skewer of olives."
+        },
+        {
+            "id": "7",
+            "name": "Cosmopolitan",
+            "liquor-type": ["Vodka"],
+            "flavor-profile": "Sour",
+            "ingredients": [
+                {"name": "Vodka", "amount": {"unit": "oz", "value": 1.5}},
+                {"name": "Cointreau", "amount": {"unit": "oz", "value": 0.75}},
+                {"name": "Cranberry Juice", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Lime Juice", "amount": {"unit": "oz", "value": 0.25}}],
+            "glass": "Martini Glass", 
+            "instructions": "Shake and strain ingredients into a chilled martini glass. Garnish with an orange twist."
+        },
+        {
+            "id": "8",
+            "name": "Manhattan",
+            "liquor-type": ["Whiskey"],
+            "flavor-profile": "Sweet",
+            "ingredients": [
+                {"name": "Rye Whiskey", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Sweet Red Vermouth", "amount": {"unit": "oz", "value": 1}},
+                {"name": "Angostura Bitters", "amount": {"dashes": "oz", "value": 2}}],
+            "glass": "Martini Glass", 
+            "instructions": "Stir and strain ingredients into a chilled martini glass. Garnish with a brandied cherry."
+        },
+        {
+            "id": "9",
+            "name": "Tom Collins",
+            "liquor-type": ["Gin"],
+            "flavor-profile": "Strong",
+            "ingredients": [
+                {"name": "Gin", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Club Soda", "amount": {"unit": "oz", "value": 2}},
+                {"name": "Lime Juice", "amount": {"unit": "oz", "value": 0.75}},
+                {"name": "Simply Syrup", "amount": {"unit": "oz", "value": 0.5}}],
+            "glass": "Collins Glass",
+            "instructions": "Shake Gin, Lemon Juice and Simply Syrup and top with club soda. Strain into chilled tall cocktail glass. Garnish with lemon twist."
+        },
+        {
+            "id": "10",
+            "name": "Tequila Sunrise",
+            "liquor-type": ["Tequila"],
+            "flavor-profile": "Sweet",
+            "ingredients": [
+                {"name": "Tequila", "amount": {"unit": "oz", "value": 1.5}},
+                {"name": "Orange Juice", "amount": {"unit": "oz", "value": 3}},
+                {"name": "Grenadine Syrup", "amount": {"unit": "oz", "value": 0.5}}],
+            "glass": "Collins Glass", 
+            "instructions": "Pour tequila and orange juice into a tall cocktail glass over ice. Add Grenadine, do not stir. Garnish with orange slice and cherry. Serve."
+        }
+    ]
+}

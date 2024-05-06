@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bartender Helper</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+    </style>
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <br />
+    <div><button id="modeButton" onclick="toggleMode()">Light Mode</button></div>
+    <img src="./images/bartenderhelper_logo.png" height=200px>
+    <h1><strong>Bartender Helper</strong></h1>
+    <h4>A Helpful Guide to Intoxication | 21+ Only!</h4>
+    
+    <div class="box">
+    <form id="cocktail-finder">
+        <label>Liquor Type  </label>
+        <select id="liquor-type">
+            <option value="""></option>
+            <option value="Vodka">Vodka</option>
+            <option value="Gin">Gin</option>   
+            <option value="Tequila">Tequila</option>
+            <option value="Whiskey">Whiskey</option>
+            <option value="Rum">Rum</option>
+            <option value="Non-Alcoholic">Non-Alcoholic</option>
+        </select><br /><br />
+        <label>Flavor Profile  </label>
+        <select id="flavor-profile">
+            <option value=""></option>
+            <option value="Dry">Dry</option>
+            <option value="Sweet">Sweet</option>
+            <option value="Refreshing">Refreshing</option>
+            <option value="Sour">Sour</option>
+            <option value="Strong">Strong</option>    
+        </select>      
+        <br /><br /><input type="submit" value="Generate">
+    </form>
+    </div> 
+    <div id="cocktail-container"></div>
+    <br />
+    <script>
+        function toggleMode() {
+            const element = document.body;
+            element.classList.toggle("light-mode");
+            const button = document.getElementById("modeButton");
+                if (element.classList.contains("light-mode")) {
+                    button.textContent = "Dark Mode";
+                } else {
+                    button.textContent = "Light Mode";
+                }
+        }
+    </script>
+</body>
+</html>
