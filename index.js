@@ -42,30 +42,10 @@ function getCocktail(liquorType, flavorProfile) {
       const randomIndex = Math.floor(Math.random() * filteredCocktail.length); // 
       const randomCocktail = filteredCocktail[randomIndex]; // retrieves a random cocktail based on the criteria
       displayCocktail(randomCocktail); // displays the random cocktail 
-    } else if (liquorType === "Non-Alcoholic") {
-      displaySodaImage();
-    } else {
-      displayNoCocktailMessage();
+    } else { displayNoCocktailMessage(); // If no cocktail matches the criteria, display an error message
     }
     });
   };
-
-function displaySodaImage() {
-  const cocktailList = document.getElementById('cocktail-container');
-  const img = document.createElement('img');
-  img.src = './images/soda-image.jpeg';
-  img.alt = 'Soda Image';
-  img.height = 150;
-  cocktailList.innerHTML = ''; 
-  cocktailList.appendChild(img);
-  cocktailList.classList.add("soda-image");
-
-  const sodaText = document.createElement('p');
-  sodaText.textContent = "Enjoy a selection of organic sodas brought to you by Red Bull."
-  cocktailList.appendChild(sodaText);
-
-  cocktailList.style.display = 'block';
-}
 
 function displayNoCocktailMessage() {
   const cocktailList = document.getElementById('cocktail-container');
@@ -77,15 +57,33 @@ document.getElementById('cocktail-finder').addEventListener('submit', function(e
     event.preventDefault();
     const liquorType = document.getElementById('liquor-type').value;
     const flavorProfile = document.getElementById('flavor-profile').value;
-  
-    // Check if both liquor type and flavor profile are selected
-    if (liquorType.trim() !== '' && flavorProfile.trim() !== '') {
+
+    if (liquorType === "Non-Alcoholic") {
+      displaySodaImage();
+    }
+    else if (liquorType.trim() !== '' && flavorProfile.trim() !== '') { // Check if both liquor type and flavor profile are selected
         getCocktail(liquorType, flavorProfile);
-    } else {
-        // If either liquor type or flavor profile is not selected, display an error message
-        displayCriteriaMessage();
+    } else { displayCriteriaMessage(); // If either liquor type or flavor profile is not selected, display an error message  
     }
   });
+
+function displaySodaImage() {
+    // FUNCTION: displaySodaImage = figure out how to generate a pop up within the page to show offering of organic sodas
+  const cocktailList = document.getElementById('cocktail-container');
+  const img = document.createElement('img');
+  img.src = './images/soda-image.jpeg';
+  img.alt = 'Soda Image';
+  img.height = 150;
+  cocktailList.innerHTML = ''; 
+  cocktailList.appendChild(img);
+  cocktailList.classList.add("soda-image");
+  
+  const sodaText = document.createElement('p');
+  sodaText.textContent = "Enjoy a selection of organic sodas brought to you by Red Bull."
+  cocktailList.appendChild(sodaText);
+  
+  cocktailList.style.display = 'block';
+};
 
 function displayCriteriaMessage() {
   const cocktailList = document.getElementById('cocktail-container');
@@ -166,5 +164,5 @@ document.addEventListener('keyDown', function() {
 
 });
 
-// FUNCTION: nonAlcCocktail = figure out how to generate a pop up within the page to show offering of organic sodas (with X to exit in-window pop up)
+
 // research on possibility of this function
