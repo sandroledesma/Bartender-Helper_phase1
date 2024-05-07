@@ -12,13 +12,11 @@ INITIAL PROMPTS:
 JAVASCRIPT GENERATORS: 
 > (~~complete~~) Bartender Helper will show ingredients (with images) = SUBMIT 
   > FUNCTION: randomCocktail = submit event listener when input form type=submit (GENERATE) is submitted
-> (~~incomplete~~) Bartender Helper will allow to generate another cocktail if the random cocktail does not suffice = KEYDOWN 
-  > FUNCTION: nextCocktail = keyDown event listener to next cocktail with the same liquor type/flavor profile
-> (~~complete~~) Bartender Helper can increase serving size = CLICK
+> (~~complete~~) Bartender Helper can increase serving size = CHANGE
   > FUNCTION: cocktailServingSize = cocktails.ingredients.amount.value * servingSize
-> (~~complete~~) Bartender Helper will show type of glass to use (with image) = MOUSEOVER (EXTRA)
+> (~~complete~~) Bartender Helper will show type of glass to use (with image) = MOUSEOVER
   > FUNCTION: glassCocktail = mouseover event listener to show image of glass when mouse is over the cocktails.glass 
-> (~~complete~~) If Bartender chooses Non-Alcoholic, Bartender Helper will return a list of soft-drinks and a note to take care of their intoxicated friends = WINDOW.LOAD (EXTRA)
+> (~~complete~~) If Bartender chooses Non-Alcoholic, Bartender Helper will return a list of soft-drinks and a note to take care of their intoxicated friends
   > FUNCTION: nonAlcCocktail = figure out how to generate a pop up within the page to show offering of organic sodas (with X to exit in-window pop up)
 
 ITERATE = FILTER or FOR EACH 
@@ -26,11 +24,15 @@ ITERATE = FILTER or FOR EACH
 CSS DESIGN: 
 > Black Background, simple design, mobile friendly, dark mode/light mode
 
+Phase 1 Project Requirements: 
+1) Five Objects with three attributes each (30 objects with 10 attributes)
+2) Single Page
+3) 3 Distinct Event Listeners (SUBMIT, CHANGE, MOUSEOVER/MOUSEOUT)
+
 */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-// FUNCTION: getCocktail = submit event listener when input form type=submit (GENERATE) is submitted
 function getCocktail(liquorType, flavorProfile) {
   fetch("http://localhost:3000/cocktails")
   .then((response) => response.json())
@@ -55,6 +57,7 @@ function displayNoCocktailMessage() {
 };
 
 document.getElementById('cocktail-finder').addEventListener('submit', function(event) {
+//  FUNCTION: getCocktail = submit event listener when input form type=submit (GENERATE) is submitted
     event.preventDefault();
     const liquorType = document.getElementById('liquor-type').value;
     const flavorProfile = document.getElementById('flavor-profile').value;
@@ -69,7 +72,6 @@ document.getElementById('cocktail-finder').addEventListener('submit', function(e
   });
 
 function displaySodaImage() {
-    // FUNCTION: displaySodaImage = figure out how to generate a pop up within the page to show offering of organic sodas
   const cocktailList = document.getElementById('cocktail-container');
   const img = document.createElement('img');
   img.src = './images/soda-image.jpeg';
@@ -95,7 +97,7 @@ function displayCriteriaMessage() {
 function displayCocktail(cocktail) {
     const cocktailList = document.getElementById('cocktail-container');
     const liquorType = Array.isArray(cocktail['liquor-type']) ? cocktail['liquor-type'].join(', ') : cocktail['liquor-type'];
-    const servingSize = 1;
+    let servingSize = 1; // changes to let from const so that servingSize is mutable 
 
     // Dev Deliverable: Do not make the cocktail-container div show up until after type=submit GENERATE is clicked
     // Below Code is building HTML within JavaScript - hence the back tick usage and no color differentiation. String interpolation is being used for pulling info from db.json
@@ -103,7 +105,6 @@ function displayCocktail(cocktail) {
         <h2>${cocktail.name}</h2>
         <label for="serving-size">Serving Size:</label>
         <input type="number" id="serving-size" value="${servingSize}" style="width: 30px; text-align: center">
-        <button id="update-serving-size">Update</button>
         <p><strong>Ingredients:</strong></p>
         <ul>
             ${cocktail.ingredients.map(ingredient => `<li>${ingredient.amount.value} ${ingredient.amount.unit} ${ingredient.name}</li>`).join('')} 
@@ -118,17 +119,16 @@ function displayCocktail(cocktail) {
     cocktailList.innerHTML = cocktailHTML;
     cocktailList.style.display = 'block';
     
-    // FUNCTION: servingSize = cocktails.ingredients.amount.value * servingSize
-    const updateButton = document.getElementById('update-serving-size');
-    updateButton.addEventListener('click', function() {
-      const servingSize = document.getElementById('serving-size');
-      const newServingSize = parseInt(servingSize.value);
+    const servingSizeInput = document.getElementById('serving-size');
 
+//  FUNCTION: servingSize = cocktails.ingredients.amount.value * servingSize (automatically with change event listener)
+    servingSizeInput.addEventListener('change', function() {
+      servingSize = parseInt(servingSizeInput.value);
       const ingredientList = document.querySelector('#cocktail-container ul');
       cocktail.ingredients.forEach((ingredient, index) => {
           const ingredientItem = ingredientList.children[index];
           const amountElement = ingredientItem.firstChild;
-          amountElement.textContent = `${ingredient.amount.value * newServingSize} ${ingredient.amount.unit} ${ingredient.name}`
+          amountElement.textContent = `${ingredient.amount.value * servingSize} ${ingredient.amount.unit} ${ingredient.name}`
       });
     });
 };
@@ -142,8 +142,8 @@ function displayGlassImage(glassType) {
 };
 
 document.getElementById('cocktail-container').addEventListener('mouseover', function(event) {
-  // FUNCTION: glassCocktail = mouseover event listener to show image of glass when mouse is over the cocktails.glass 
-  // images are contained in img src = ./images/glass/...
+//FUNCTION: glassCocktail = mouseover event listener to show image of glass when mouse is over the cocktails.glass 
+//images are contained in img src = ./images/glass/...
   const target = event.target;
   if (target.tagName === 'P' && target.innerText.startsWith('Glass:')) {
     const glassType = target.innerText.split(':')[1].trim();
@@ -156,12 +156,6 @@ document.getElementById('cocktail-container').addEventListener('mouseout', funct
   if (glassImage) {
       glassImage.remove();
   }
-});
-
-document.addEventListener('keyDown', function() {
-  // FUNCTION: nextCocktail = keyDown event listener to next cocktail with the same liquor type/flavor profile
-  // image src = ./images/keydown-image.png
-  const nextCocktail =  "";
 });
 
 });
