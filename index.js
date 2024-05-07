@@ -14,7 +14,7 @@ JAVASCRIPT GENERATORS:
   > FUNCTION: randomCocktail = submit event listener when input form type=submit (GENERATE) is submitted
 > (~~incomplete~~) Bartender Helper will allow to generate another cocktail if the random cocktail does not suffice = KEYDOWN 
   > FUNCTION: nextCocktail = keyDown event listener to next cocktail with the same liquor type/flavor profile
-> (~~complete~~) Bartender Helper can increase serving size = MULTIPLY FORMULA 
+> (~~complete~~) Bartender Helper can increase serving size = CLICK
   > FUNCTION: cocktailServingSize = cocktails.ingredients.amount.value * servingSize
 > (~~complete~~) Bartender Helper will show type of glass to use (with image) = MOUSEOVER (EXTRA)
   > FUNCTION: glassCocktail = mouseover event listener to show image of glass when mouse is over the cocktails.glass 
