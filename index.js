@@ -24,10 +24,12 @@ ITERATE = FILTER or FOR EACH
 CSS DESIGN: 
 > Black Background, simple design, mobile friendly, dark mode/light mode
 
-Phase 1 Project Requirements: 
-1) Five Objects with three attributes each (30 objects with 10 attributes)
+Phase 1 Project MVP Requirements: 
+1) Five Objects with three attributes each 
 2) Single Page
 3) 3 Distinct Event Listeners (SUBMIT, CHANGE, MOUSEOVER/MOUSEOUT)
+4) 1 Instance of Array Iteration (FILTER, )
+5) STRETCH GOAL: Use db.json / json.server
 
 */
 
@@ -37,7 +39,7 @@ function getCocktail(liquorType, flavorProfile) {
   fetch("http://localhost:3000/cocktails")
   .then((response) => response.json())
   .then(cocktails => { // this is where we iterate the information from JSON to JS/HTML
-    const filteredCocktail = cocktails.filter(cocktail => 
+    const filteredCocktail = cocktails.filter(cocktail => // Filter array iteration based on two parameters 
       cocktail['liquor-type'].includes(liquorType) &&
       cocktail['flavor-profile'] === flavorProfile
     );
@@ -101,6 +103,7 @@ function displayCocktail(cocktail) {
 
     // Dev Deliverable: Do not make the cocktail-container div show up until after type=submit GENERATE is clicked
     // Below Code is building HTML within JavaScript - hence the back tick usage and no color differentiation. String interpolation is being used for pulling info from db.json
+    // Array iteration used to map all elements of the ingredient list for the specific cocktail displayed 
     const cocktailHTML = `
         <h2>${cocktail.name}</h2>
         <label for="serving-size">Serving Size:</label>
@@ -125,7 +128,7 @@ function displayCocktail(cocktail) {
     servingSizeInput.addEventListener('change', function() {
       servingSize = parseInt(servingSizeInput.value);
       const ingredientList = document.querySelector('#cocktail-container ul');
-      cocktail.ingredients.forEach((ingredient, index) => {
+      cocktail.ingredients.forEach((ingredient, index) => { // Iterate the servingSize change across all elements of the ingredient list 
           const ingredientItem = ingredientList.children[index];
           const amountElement = ingredientItem.firstChild;
           amountElement.textContent = `${ingredient.amount.value * servingSize} ${ingredient.amount.unit} ${ingredient.name}`
